@@ -1,0 +1,31 @@
+{
+  "name": "pinpoint-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "env:prod": "cross-env NODE_ENV=production",
+    "env:dev": "cross-env NODE_ENV=development",
+    "clean": "rimraf _site",
+    "build:css": "postcss styles/tailwind.css --o _site/style.css",
+    "watch:css": "postcss styles/tailwind.css --o _site/style.css -w",
+    "build:eleventy": "eleventy",
+    "watch:eleventy": "eleventy --serve",
+    "start": "npm-run-all env:dev clean --parallel watch:**",
+    "deploy": "npm-run-all env:prod build:eleventy build:css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "autoprefixer": "^10.2.5",
+    "cross-env": "^7.0.3",
+    "cssnano": "^5.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.12",
+    "postcss-cli": "^8.3.1",
+    "rimraf": "^3.0.2",
+    "tailwindcss": "^2.1.2"
+  }
+}
