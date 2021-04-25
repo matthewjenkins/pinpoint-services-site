@@ -4,15 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "env:prod": "cross-env NODE_ENV=production",
-    "env:dev": "cross-env NODE_ENV=development",
     "clean": "rimraf _site",
     "build:css": "postcss styles/tailwind.css --o _site/style.css",
     "watch:css": "postcss styles/tailwind.css --o _site/style.css -w",
     "build:eleventy": "eleventy",
     "watch:eleventy": "eleventy --serve",
-    "start": "npm-run-all env:dev clean --parallel watch:**",
-    "deploy": "npm-run-all env:prod build:eleventy build:css"
+    "start": "npm-run-all clean --parallel watch:**",
+    "deploy": "npm-run-all build:eleventy build:css"
   },
   "keywords": [],
   "author": "",
