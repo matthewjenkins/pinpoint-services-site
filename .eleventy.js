@@ -19,6 +19,8 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toFormat("yyyy-LL-dd");
   });
 
+  eleventyConfig.addPassthroughCopy("scripts/site.js");
+
   return {
     passthroughFileCopy: true,
     dir: {
