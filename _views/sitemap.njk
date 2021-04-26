@@ -1,0 +1,20 @@
+---
+permalink: /sitemap.xml
+excludeFromSitemap: true
+
+index: sitemap.xml
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for page in collections.all %}
+{%- if not page.data.excludeFromSitemap %}
+  {% set absoluteUrl %}{{ page.url | url | absoluteUrl(metadata.url) | valueIf("/", "/index.html") }}{% endset %}
+  <url>
+    <loc>{{ site.url }}{{ absoluteUrl }}</loc>
+    <lastmod>{{ page.date | htmlDateString }}</lastmod>
+    <changefreq>{{ page.changefreq | valueIfEmpty("monthly")}} </changefreq>
+    <priority>{{ page.priority | valueIfEmpty("0.5") }}</priority>
+  </url>
+{%- endif %}
+{%- endfor %}
+</urlset>
