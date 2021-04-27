@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Cleaning",
+    "url": "https://www.pinpoint.cleaning",
+    "description": "Have a local cleaning business? Let us add you to our listing to see your customer base grow",
+    "tags": ["Maid Service", "Cleaning"],
+    "button_text": "View Site",
+    "image": {
+      "src": "https://source.unsplash.com/Iu6parQAO-U/1654",
+      "alt": ""
+    }
+  },
+  {
+    "name": "Roofing & Construction",
+    "url": "",
+    "description": "Coming Soon",
+    "tags": ["Roofing", "Construction"],
+    "button_text": "View Site",
+    "image": {
+      "src": "https://source.unsplash.com/IC5sX-7PRN8/1654",
+      "alt": ""
+    }
+  },
+  {
+    "name": "Contact Us",
+    "url": "/contact.html",
+    "description": "Contact us and let us know how we can serve your online marketing needs",
+    "tags": ["Local Business", "Marketing", "Advertsing"],
+    "button_text": "Contact Us",
+    "image": {
+      "src": "https://source.unsplash.com/S9OCBwRFV_k/1654",
+      "alt": ""
+    }
+  }
+]

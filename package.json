@@ -19,6 +19,7 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-plugin-rss": "^1.1.1",
     "autoprefixer": "^10.2.5",
     "cross-env": "^7.0.3",
     "cssnano": "^5.0.1",
@@ -27,5 +28,8 @@
     "postcss-cli": "^8.3.1",
     "rimraf": "^3.0.2",
     "tailwindcss": "^2.1.2"
+  },
+  "dependencies": {
+    "luxon": "^1.26.0"
   }
 }

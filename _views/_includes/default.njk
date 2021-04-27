@@ -1,0 +1,54 @@
+---
+gtag: "G-L8VY805RFJ"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      {% if renderData.title %}
+        Pinpoint Services | {{ renderData.title }}
+      {% else %}
+        Pinpoint Services
+      {% endif %}
+    </title>
+    <meta charset="UTF-8"/>
+    {% if meta_description %}
+      <meta name="description" content="{{meta_description}}"/>
+    {% endif %}
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css" integrity="sha256-x8PYmLKD83R9T/sYmJn1j3is/chhJdySyhet/JuHnfY=" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/style.css"/>
+    <script src="/scripts/site.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ gtag }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '{{ gtag }}');
+  </script>
+  </head>
+  <body>
+      {% include "_nav.html" %}
+       <div class="md:container md:mx-auto p-4">
+        {{ content | safe }}
+      <div>
+      <footer class="footer bg-white relative pt-1">
+        <div class="">
+          <div class="mt-16 border-t-2 border-gray-300 flex flex-col items-center">
+              <div class="sm:w-2/3 text-center py-6">
+                  <p class="text-xs font-bold mb-2">
+                      © 2021 Pinpoint Services LLC
+                  </p>
+              </div>
+          </div>
+        </div>
+      </footer>
+  </body>
+</html>
