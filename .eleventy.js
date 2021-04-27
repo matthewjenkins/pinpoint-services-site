@@ -20,6 +20,7 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addPassthroughCopy("scripts/site.js");
+  eleventyConfig.addPassthroughCopy({ assets: "/" });
 
   return {
     passthroughFileCopy: true,
