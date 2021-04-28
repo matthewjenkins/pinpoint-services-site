@@ -3,6 +3,7 @@ permalink: /sitemap.xml
 excludeFromSitemap: true
 
 index: sitemap.xml
+siteUrl: https://www.pinpoint.services
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -10,7 +11,7 @@ index: sitemap.xml
 {%- if not page.data.excludeFromSitemap %}
   {% set absoluteUrl %}{{ page.url | url | absoluteUrl(metadata.url) | valueIf("/", "/index.html") }}{% endset %}
   <url>
-    <loc>{{ site.url }}{{ absoluteUrl }}</loc>
+    <loc>{{ siteUrl }}{{ site.url }}{{ absoluteUrl }}</loc>
     <lastmod>{{ page.date | htmlDateString }}</lastmod>
     <changefreq>{{ page.changefreq | valueIfEmpty("monthly")}} </changefreq>
     <priority>{{ page.priority | valueIfEmpty("0.5") }}</priority>
