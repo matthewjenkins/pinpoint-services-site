@@ -71,7 +71,9 @@ renderData:
               />
             </svg>
             <div class="ml-4 text-md tracking-wide font-semibold w-40">
-              <a href="tel:9496364060" class="underline">(949) 636-4060</a>
+              <a href="tel:{{ site.phone }}" class="underline"
+                >{{ site.phone | formatPhone }}</a
+              >
             </div>
           </div>
 
@@ -93,8 +95,8 @@ renderData:
               />
             </svg>
             <div class="ml-4 text-md tracking-wide font-semibold w-40">
-              <a href="mailto://support@pinpoint.services" class="underline"
-                >support@pinpoint.services</a
+              <a href="mailto://{{ site.email }}" class="underline"
+                >{{ site.email }}</a
               >
             </div>
           </div>

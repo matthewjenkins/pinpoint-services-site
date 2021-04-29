@@ -14,6 +14,10 @@ module.exports = function (eleventyConfig) {
     return input || value;
   });
 
+  eleventyConfig.addFilter("formatPhone", (value) => {
+    return value.replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2-$3");
+  });
+
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
   eleventyConfig.addFilter("htmlDateString", (dateObj) => {
     return DateTime.fromJSDate(dateObj).toFormat("yyyy-LL-dd");
